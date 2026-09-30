@@ -29,11 +29,12 @@
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --r: 12px;
   --shadow: 0 1px 2px rgba(10, 9, 6, 0.06), 0 12px 32px rgba(10, 9, 6, 0.10);
+  --texture: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><rect width='12' height='12' fill='rgba(128,128,128,0.1)'/><rect x='12' y='12' width='12' height='12' fill='rgba(128,128,128,0.1)'/></svg>");
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; text-wrap: pretty; -webkit-font-smoothing: antialiased; }
+body { background-color: var(--cream); background-image: var(--texture); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; text-wrap: pretty; -webkit-font-smoothing: antialiased; }
 body.lb-open { overflow: hidden; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: var(--teal); text-decoration: none; }
@@ -99,7 +100,7 @@ section + section { border-top: 1px solid var(--line); }
 
 /* case studies */
 .cs { position: relative; padding: 88px 0; --cs-bg: var(--cream); --cs-accent: var(--teal); }
-.cs::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--cs-bg); z-index: -1; }
+.cs::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background-color: var(--cs-bg); background-image: var(--texture); z-index: -1; }
 .cs:nth-of-type(even) { --cs-bg: var(--ink); --cs-accent: var(--rust-light); color: var(--cream); }
 .cs:nth-of-type(even) .eyebrow { color: var(--bone); }
 .cs:nth-of-type(even) .fact, .cs:nth-of-type(even) .callout { color: var(--ink); }
@@ -156,7 +157,7 @@ figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; 
 .list small { display: block; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--stone); margin-top: 2px; }
 
 /* contact band */
-.contact { background: var(--ink); color: var(--cream); border-top: 0; }
+.contact { background-color: var(--ink); background-image: var(--texture); color: var(--cream); border-top: 0; }
 .contact .eyebrow { color: var(--bone); }
 .contact h2 { margin-top: 14px; max-width: 760px; }
 .contact .btn { color: var(--cream); border-color: rgba(244, 241, 234, 0.5); }
