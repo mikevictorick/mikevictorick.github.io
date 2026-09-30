@@ -100,7 +100,9 @@ section + section { border-top: 1px solid var(--line); }
 /* case studies */
 .cs { position: relative; padding: 88px 0; --cs-bg: var(--cream); --cs-accent: var(--teal); }
 .cs::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--cs-bg); z-index: -1; }
-.cs:nth-of-type(even) { --cs-bg: var(--paper); --cs-accent: var(--rust); }
+.cs:nth-of-type(even) { --cs-bg: var(--ink); --cs-accent: var(--rust-light); color: var(--cream); }
+.cs:nth-of-type(even) .eyebrow { color: var(--bone); }
+.cs:nth-of-type(even) .fact, .cs:nth-of-type(even) .callout { color: var(--ink); }
 
 .cs-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
 .cs-head h3 { margin: 14px 0 28px; }
@@ -166,6 +168,7 @@ figcaption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; 
 footer { border-top: 1px solid var(--line); padding: 32px 0 48px; }
 footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 footer p { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--stone); max-width: 720px; line-height: 1.6; }
+.footer-brand { display: flex; align-items: center; gap: 12px; }
 
 /* popup viewer */
 dialog#lb { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; margin: 0; color: var(--cream); }
@@ -251,7 +254,7 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
       <div class="collage" aria-label="Featured work">
         <a class="tile big" href="#cs1"><img src="images/cs1-deck-1-title.webp" width="1400" height="788" alt="Title slide from the AI adoption training deck."><span class="chip">01 · AI adoption training</span></a>
         <a class="tile" href="#cs2"><img src="images/cs2-system.webp" width="1800" height="950" alt="System diagram of two AI skills that build Canvas pages."><span class="chip">02 · LMS system</span></a>
-        <a class="tile" href="#cs3"><img src="images/cs3-tool-guide.webp" width="1200" height="1553" alt="One-page AI tool guide for educators."><span class="chip">03 · Tool enablement</span></a>
+        <a class="tile" href="#cs3"><img src="images/cs3-tool-guide.webp" width="1200" height="1553" alt="One-page AI tool guide for educators."><span class="chip">03 · Instructional coaching</span></a>
       </div>
     </div>
   </div>
@@ -264,7 +267,7 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
         <h2 id="summary-h">Seven years of designing training in schools</h2>
       </div>
       <div>
-        <p class="body">I have spent more than seven years in K-12 education designing training, building LMS courses, and helping colleagues adopt new technology. Most recently I have worked on AI: teaching it to adults, and building workflows that other teachers now run without me.</p>
+        <p class="body">I have spent more than seven years in K-12 education as an instructional designer, building training, LMS courses, and the systems that help colleagues put new technology to use. Most recently I have worked on AI: teaching it to adults, and designing instruction that other teachers now run without me.</p>
         <p class="body">I am moving into corporate learning and customer enablement. The three case studies below come from school settings and are described that way.</p>
       </div>
     </div>
@@ -303,7 +306,7 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
         <div class="story">
           <div>
             <h4>Approach</h4>
-            <p>I worked backward from one outcome: every attendee leaves with two working AI prompts built from the TEKS they teach, one for a project-based assignment and one for a formative assignment. A three-path structure (beginner, intermediate, advanced) let people pick the level that fit them, and all three paths ended at the same outcome. I taught one transferable habit, asking the AI to improve its own prompt, so the skill would outlast the session. I ran the session through with a fellow educator, revised from their notes, and sent it to the district for approval.</p>
+            <p>I used backward design, starting from one outcome and building everything else to reach it: every attendee leaves with two working AI prompts built from the TEKS they teach, one for a project-based assignment and one for a formative assignment. To differentiate for a room with no shared starting point, I built a three-path structure (beginner, intermediate, advanced) that let people enter at their level while ending at the same outcome. I taught one transferable skill, prompting the AI to improve its own prompt, so the learning outlasts the session. I piloted the session with a fellow educator, revised from their notes, and got it approved by the district.</p>
           </div>
           <figure class="frame">
             <div class="bar"><i></i><i></i><i></i><span>Recreated from memory</span></div>
@@ -349,7 +352,7 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
             <p class="eyebrow">— Case study 02</p>
             <h3 id="cs2-h">Canvas LMS Course Templates and Reusable AI Workflows</h3>
             <p class="label">— Business problem</p>
-            <p class="lead">Losing Canvas's built-in design tool removed any way to build course pages with a consistent look and structure. Without a system, each teacher built pages individually, and course content across the program came out inconsistent and messy.</p>
+            <p class="lead">Losing Canvas's built-in design tool removed any way to build course pages with a consistent instructional structure. Without a system, each teacher built pages individually, so students moving between teachers hit a different layout, a different placement of objectives, and a different assignment structure every time.</p>
           </div>
           <figure class="frame">
             <div class="bar"><i></i><i></i><i></i><span>Recreated</span></div>
@@ -367,7 +370,7 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
         <div class="story solo-col">
           <div>
             <h4>Approach</h4>
-            <p>I used AI to build a program-specific brand system, giving it Canvas's allowed HTML structure and each module's required elements (objectives, TEKS, standard lesson-planning components). I standardized on two reusable page templates, an Assignment Page and a Submission Page, to replace ad hoc page building. I packaged the process into two modular AI skills: one that sets up a course's brand and folder structure, and a second that uses that structure to generate standardized Canvas pages. That made the system self-service for other teachers.</p>
+            <p>I used AI to build a program-specific brand system, giving it Canvas's allowed HTML structure and each module's required elements (objectives, TEKS, standard lesson-planning components). I standardized on two reusable page templates, an Assignment Page and a Submission Page, so objectives, TEKS, and expectations land in the same place and order on every page regardless of who built it, giving students consistent scaffolding across a program taught by different teachers. I packaged the process into two modular AI skills: one that sets up a course's brand and folder structure, and a second that uses that structure to generate standardized pages. That made the system self-service for other teachers.</p>
           </div>
         </div>
 
@@ -402,9 +405,9 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
         <div class="cs-head">
           <div>
             <p class="eyebrow">— Case study 03</p>
-            <h3 id="cs3-h">Ad Hoc Technology Enablement: Generative AI Support for School Staff</h3>
+            <h3 id="cs3-h">Just-in-Time Instructional Coaching: Closing AI Skill Gaps for School Staff</h3>
             <p class="label">— Business problem</p>
-            <p class="lead">Staff across the school kept hitting different walls with Gemini and other AI tools: prompting and iteration technique, building lesson handouts, staying under usage limits, and basic orientation. No structured training or support channel existed for any of it.</p>
+            <p class="lead">Staff across the school kept hitting different walls with Gemini and other AI tools: prompting and iteration technique, building lesson handouts, staying under usage limits, and basic orientation. There was no structured training, so every skill gap had to be diagnosed and closed one person at a time, on the spot.</p>
           </div>
           <figure class="frame portrait">
             <div class="bar"><i></i><i></i><i></i><span>Recreated sample</span></div>
@@ -416,13 +419,13 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
         <div class="facts">
           <div class="fact"><p class="label">— Audience</p><p>Five staff members in distinct roles (CTE lead, counselor, instructional coach, 9th grade English teacher, coach), each with a different use case and skill level.</p></div>
           <div class="fact"><p class="label">— Constraints</p><p>Requests arrived unscheduled, with only minutes available per person alongside a full teaching load. Each conversation started with diagnosing the problem, the person's skill level, and their learning style on the spot.</p></div>
-          <div class="fact"><p class="label">— My role</p><p>Informal go-to resource, unassigned and solo. Colleagues sought me out directly after learning I hold Claude, SchoolAI, and MagicSchool certifications.</p></div>
+          <div class="fact"><p class="label">— My role</p><p>Informal instructional coach, unassigned and solo. Colleagues sought me out directly after learning I hold Claude, SchoolAI, and MagicSchool certifications.</p></div>
         </div>
 
         <div class="story solo-col">
           <div>
             <h4>Approach</h4>
-            <p>I used one coaching method. Start with the outcome the person wants. Find out what they have already tried and which tool they used, and suggest a better-fit tool when there is one. Guide with questions instead of taking over. Teach one repeatable starting move: describe the task and have the AI write the prompt. Follow up later to see whether anyone is stuck.</p>
+            <p>I ran a quick needs analysis on the spot: what outcome the person wanted, what they had already tried, and where their actual skill level was, since none of that was known in advance. I suggested a better-fit tool when the gap called for one. I guided with questions instead of taking over the task, and taught one repeatable, transferable move, describe the task and have the AI write the prompt, so the skill would carry into the next problem instead of just the one in front of us. I followed up later to check whether the skill had transferred or whether someone was stuck.</p>
           </div>
         </div>
 
@@ -440,7 +443,7 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
 
         <div class="learned">
           <h4 style="margin-bottom: 14px;">What I learned</h4>
-          <p>Most support happens outside a structured setting, with no agenda or slide deck to carry the conversation. Credibility comes from how well you know the tools.</p>
+          <p>Most instructional coaching happens outside a structured setting, with no agenda or slide deck to carry the conversation. Credibility comes from how well you know the tools.</p>
         </div>
       </article>
     </div>
@@ -473,6 +476,9 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
             <li>Canvas LMS</li>
             <li>Claude, ChatGPT, Gemini and NotebookLM</li>
             <li>MagicSchool, SchoolAI, Brisk</li>
+            <li>HTML/CSS/React</li>
+            <li>Adobe Creative Cloud</li>
+            <li>DaVinci Resolve</li>
             <li>Genially</li>
             <li>Camtasia</li>
             <li>Canva</li>
@@ -508,19 +514,21 @@ dialog#lb::backdrop { background: rgba(10, 9, 6, 0.86); }
 
 <footer>
   <div class="wrap">
-    <p>Case studies are recreated from school work. No district materials, staff names, or student information appear on this site.</p>
-    <svg role="img" aria-label="MV Matrix logo" width="32" height="32" viewBox="0 0 200 200" fill="url(#mvg)">
-      <defs><linearGradient id="mvg" gradientUnits="userSpaceOnUse" x1="171" y1="29" x2="29" y2="171"><stop offset="0%" stop-color="#2E6F7A"/><stop offset="22%" stop-color="#3C8891"/><stop offset="45%" stop-color="#C9A875"/><stop offset="72%" stop-color="#D67A3C"/><stop offset="100%" stop-color="#B5431F"/></linearGradient></defs>
-      <rect x="28" y="7" width="18" height="18"/><rect x="49" y="7" width="18" height="18"/><rect x="70" y="7" width="18" height="18"/>
-      <rect x="112" y="7" width="18" height="18"/><rect x="133" y="7" width="18" height="18"/><rect x="154" y="7" width="18" height="18"/>
-      <rect x="28" y="28" width="18" height="18"/><rect x="70" y="28" width="18" height="18"/><rect x="112" y="28" width="18" height="18"/><rect x="154" y="28" width="18" height="18"/>
-      <rect x="28" y="49" width="18" height="18"/><rect x="91" y="49" width="18" height="18"/><rect x="154" y="49" width="18" height="18"/>
-      <rect x="28" y="70" width="18" height="18"/><rect x="154" y="70" width="18" height="18"/>
-      <rect x="28" y="112" width="18" height="18"/><rect x="49" y="112" width="18" height="18"/><rect x="133" y="112" width="18" height="18"/><rect x="154" y="112" width="18" height="18"/>
-      <rect x="49" y="133" width="18" height="18"/><rect x="70" y="133" width="18" height="18"/><rect x="112" y="133" width="18" height="18"/><rect x="133" y="133" width="18" height="18"/>
-      <rect x="70" y="154" width="18" height="18"/><rect x="91" y="154" width="18" height="18"/><rect x="112" y="154" width="18" height="18"/>
-      <rect x="91" y="175" width="18" height="18"/>
-    </svg>
+    <div class="footer-brand">
+      <svg role="img" aria-label="MV Matrix logo" width="32" height="32" viewBox="0 0 200 200" fill="url(#mvg)">
+        <defs><linearGradient id="mvg" gradientUnits="userSpaceOnUse" x1="171" y1="29" x2="29" y2="171"><stop offset="0%" stop-color="#2E6F7A"/><stop offset="22%" stop-color="#3C8891"/><stop offset="45%" stop-color="#C9A875"/><stop offset="72%" stop-color="#D67A3C"/><stop offset="100%" stop-color="#B5431F"/></linearGradient></defs>
+        <rect x="28" y="7" width="18" height="18"/><rect x="49" y="7" width="18" height="18"/><rect x="70" y="7" width="18" height="18"/>
+        <rect x="112" y="7" width="18" height="18"/><rect x="133" y="7" width="18" height="18"/><rect x="154" y="7" width="18" height="18"/>
+        <rect x="28" y="28" width="18" height="18"/><rect x="70" y="28" width="18" height="18"/><rect x="112" y="28" width="18" height="18"/><rect x="154" y="28" width="18" height="18"/>
+        <rect x="28" y="49" width="18" height="18"/><rect x="91" y="49" width="18" height="18"/><rect x="154" y="49" width="18" height="18"/>
+        <rect x="28" y="70" width="18" height="18"/><rect x="154" y="70" width="18" height="18"/>
+        <rect x="28" y="112" width="18" height="18"/><rect x="49" y="112" width="18" height="18"/><rect x="133" y="112" width="18" height="18"/><rect x="154" y="112" width="18" height="18"/>
+        <rect x="49" y="133" width="18" height="18"/><rect x="70" y="133" width="18" height="18"/><rect x="112" y="133" width="18" height="18"/><rect x="133" y="133" width="18" height="18"/>
+        <rect x="70" y="154" width="18" height="18"/><rect x="91" y="154" width="18" height="18"/><rect x="112" y="154" width="18" height="18"/>
+        <rect x="91" y="175" width="18" height="18"/>
+      </svg>
+      <p>| All Rights Reserved | ©2026 Mike Victorick</p>
+    </div>
   </div>
 </footer>
 
