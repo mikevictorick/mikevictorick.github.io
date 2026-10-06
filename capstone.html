@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mike Victorick | Learning Experience Designer</title>
-<meta name="description" content="Portfolio of Mike Victorick, Learning Experience Designer. Three case studies in AI adoption training, LMS course systems, and technology enablement.">
+<title>Enhancing AI Proficiency | Mike Victorick</title>
+<meta name="description" content="Enhancing AI Proficiency, a WGU graduate capstone: a one-hour Canvas course on AI basics for adults with basic digital literacy, with the study results and a case study by Mike Victorick.">
 <meta name="theme-color" content="#F2EFE6">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,8 +133,6 @@ h4 { font-size: var(--fs-md); font-weight: 600; font-variation-settings: "opsz" 
 .hero .lede { margin-top: 20px; max-width: 520px; font-size: 18px; line-height: 1.55; color: var(--fg-2); }
 .slash { display: block; height: 14px; border: 0; overflow: hidden; background: repeating-linear-gradient(calc(90deg - var(--again-shear)), var(--accent) 0 3px, transparent 3px 22px); }
 
-.hero-portrait { justify-self: end; width: 100%; max-width: 440px; margin: 0; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); background: var(--bg-card); }
-.hero-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; }
 .collage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .tile { position: relative; display: block; border-radius: var(--r-md); overflow: hidden; background: var(--bg-card); border: 1px solid var(--line); transition: border-color var(--dur-fast) var(--ease); }
 .tile:hover { text-decoration: none; border-color: var(--line-strong); }
@@ -241,14 +239,9 @@ figcaption { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.0
 .mod-body h3 { font-size: 22px; margin: 10px 0 12px; }
 .mod-body h3 a { color: var(--fg); }
 .mod-body h3 a:hover { color: var(--accent); text-decoration: none; }
-.mod-body p.desc { font-size: 16px; line-height: 1.5; color: var(--fg-2); margin-bottom: 20px; }
+.mod-body p.desc { font-size: 16px; line-height: 1.5; color: var(--fg-2); }
 .mod-body .btn { margin-top: auto; }
-.mods.single { grid-template-columns: 1fr; }
-.tile.mod.wide { flex-direction: row; }
-.tile.mod.wide .mod-thumb { flex: 0 0 62%; }
-.tile.mod.wide .mod-thumb img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: left center; }
-.tile.mod.wide .mod-body { justify-content: center; padding: 28px; }
-.tile.mod.wide .mod-body .btn { margin-top: 0; }
+.mod-body p.desc + .btn { margin-top: 20px; }
 
 /* skills */
 .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
@@ -295,17 +288,12 @@ dialog#lb::backdrop { background-color: rgba(14, 13, 11, 0.92); }
   section { padding: 64px 0; }
   .hero { padding: 56px 0 56px; }
   .hero .wrap, .summary .wrap, .cs-head, .story { grid-template-columns: 1fr; gap: 36px; }
-  .hero-portrait { justify-self: center; max-width: 360px; }
   .story.solo-col { grid-template-columns: 1fr; }
   .cs { padding: 64px 0; }
   #work { padding: 64px 0 0; }
   #work + #skills { padding-top: 32px; }
   #work + #modules { padding-top: 32px; }
   .mods { grid-template-columns: 1fr; }
-  .tile.mod.wide { flex-direction: column; }
-  .tile.mod.wide .mod-thumb { flex: none; }
-  .tile.mod.wide .mod-thumb img { height: auto; aspect-ratio: 1200 / 630; }
-  .tile.mod.wide .mod-body { padding: 24px 24px 28px; }
   .facts { grid-template-columns: 1fr; margin-top: 40px; }
   .story, .callout, .learned, .gallery-wrap { margin-top: 48px; }
   .callout { padding: 24px; }
@@ -319,14 +307,42 @@ dialog#lb::backdrop { background-color: rgba(14, 13, 11, 0.92); }
   .lb-body { max-height: calc(100vh - 170px); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .zoom .hint, .btn, .tile, .lb-btn, .btn.primary::after { transition: none; } }
+
+/* module pages */
+main { overflow-x: clip; }
+.page-head { padding: 48px 0 64px; }
+.back { display: inline-block; font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg); margin-bottom: 40px; }
+.back:hover { color: var(--accent); text-decoration: none; }
+.page-head h1 { margin-top: 18px; }
+.page-head .lede { margin-top: 20px; max-width: 560px; font-size: 18px; line-height: 1.55; color: var(--fg-2); }
+section.pg { padding: 64px 0; }
+section.pg-end { padding: 64px 0 0; }
+.embed { position: relative; aspect-ratio: 16 / 10; background: var(--bg-inset); }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.module-note { margin-top: 20px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--fg-3); }
+.btns.tight { margin-top: 20px; }
+.gallery.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.story p + p { margin-top: 14px; }
+.fact ul, .callout ul, .gallery-wrap ul { padding-left: 20px; margin-top: 10px; }
+.fact li, .gallery-wrap li { font-size: 16px; line-height: 1.4; color: var(--fg-2); margin-top: 6px; }
+.callout li { font-size: 17px; line-height: 1.5; font-weight: 500; color: var(--fg-2); margin-top: 6px; max-width: 820px; }
+.callout p + ul, .callout ul + p { margin-top: 12px; }
+.learned p + p { margin-top: 14px; }
+@media (max-width: 900px) {
+  .page-head { padding: 32px 0 40px; }
+  section.pg { padding: 48px 0; }
+  section.pg-end { padding: 48px 0 0; }
+  .embed { aspect-ratio: 3 / 4; }
+  .gallery.two { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
-<a class="skip" href="#work">Skip to the case studies</a>
+<a class="skip" href="#screens">Skip to the screens</a>
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Mike Victorick, top of page">
+    <a class="brand" href="index.html#top" aria-label="Mike Victorick, top of page">
       <svg role="img" aria-label="Mike Victorick mark" width="32" height="20" viewBox="0 0 1043.61 660.06" fill="currentColor">
         <g>
           <path d="M244.09,16.39c-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.82,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92,5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.81-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92Z"/>
@@ -339,9 +355,9 @@ dialog#lb::backdrop { background-color: rgba(14, 13, 11, 0.92); }
     </a>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -349,328 +365,109 @@ dialog#lb::backdrop { background-color: rgba(14, 13, 11, 0.92); }
 
 <main id="top">
 
-  <div class="hero">
+  <div class="page-head">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Portfolio</p>
-        <h1 style="margin-top: 18px;">Mike Victorick</h1>
-        <p class="role">Learning Experience Designer</p>
-        <p class="lede">I build training, LMS courses, and AI-assisted workflows for people who have to use them the next day.</p>
-        <div class="btns">
-          <a class="btn primary" href="#work">See the work <span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn" href="#contact">Get in touch</a>
-        </div>
-      </div>
-      <figure class="hero-portrait"><img src="images/mike-headshot.webp" width="1000" height="1241" alt="Portrait of Mike Victorick in a white collared shirt, with glasses and a beard."></figure>
+      <a class="back" href="index.html#capstone"><span aria-hidden="true">←</span> Back to portfolio</a>
+      <p class="eyebrow">Graduate capstone</p>
+      <h1>Enhancing AI Proficiency</h1>
+      <p class="lede">My WGU capstone: a one-hour Canvas course that teaches AI basics to adults with basic digital literacy, plus the mixed-methods study I ran on it.</p>
     </div>
   </div>
   <div class="slash" role="presentation"></div>
 
-  <section id="summary" class="summary tex tex--grain" aria-labelledby="summary-h">
+  <section id="screens" class="pg" aria-labelledby="screens-h">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Summary</p>
-        <h2 id="summary-h">Eight years of designing training in schools</h2>
+      <div class="sec-head">
+        <p class="eyebrow">Screens</p>
+        <h2 id="screens-h">Three screens from the course</h2>
       </div>
-      <div>
-        <p class="body">I have spent more than eight years in K-12 education as an instructional designer, building training, LMS courses, and the systems that help colleagues put new technology to use. Most recently I have worked on AI: teaching it to adults, and designing instruction that other teachers now run without me.</p>
-        <p class="body">I am moving into corporate learning and customer enablement. The three case studies below come from school settings and are described that way.</p>
+      <div class="gallery">
+        <figure class="frame">
+          <a class="zoom" href="images/cap-assignment.webp" target="_blank" rel="noopener"><img src="images/cap-assignment.webp" width="959" height="613" loading="lazy" decoding="async" alt="Canvas assignment page titled Hands on project, with instructions to write a first ChatGPT prompt and a linked ChatGPT workflow."><span class="hint">Enlarge</span></a>
+          <figcaption>The hands-on project. Learners write a real prompt in ChatGPT and submit it.</figcaption>
+        </figure>
+        <figure class="frame">
+          <a class="zoom" href="images/cap-final.webp" target="_blank" rel="noopener"><img src="images/cap-final.webp" width="964" height="616" loading="lazy" decoding="async" alt="Canvas quiz page for the Final Assessment, showing a closing message about using AI tools as helpers and the quiz settings."><span class="hint">Enlarge</span></a>
+          <figcaption>The final assessment, with unlimited attempts and immediate answers.</figcaption>
+        </figure>
+        <figure class="frame">
+          <a class="zoom" href="images/cap-survey.webp" target="_blank" rel="noopener"><img src="images/cap-survey.webp" width="962" height="614" loading="lazy" decoding="async" alt="Course evaluation survey embedded in the conclusion module, with 1 to 5 rating questions on platform usability, assessment fairness, and time commitment."><span class="hint">Enlarge</span></a>
+          <figcaption>The course evaluation survey that closes the course.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section id="work" aria-labelledby="work-h">
+  <section id="case-study" class="pg-end">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Case studies</p>
-        <h2 id="work-h">Three projects, written up like client work</h2>
-        <p>Each one covers the business problem, audience, constraints, my role, approach, deliverables, evidence of impact, and what I learned. The visuals are recreated. No district materials, staff names, or student information appear on this site. Select any image to enlarge it. Two interactive modules follow the case studies.</p>
-      </div>
-
-      <nav class="cs-nav" aria-label="Jump to case study">
-        <a href="#cs1" data-cs="cs1">01 · Adoption</a>
-        <a href="#cs2" data-cs="cs2">02 · LMS</a>
-        <a href="#cs3" data-cs="cs3">03 · Coaching</a>
-        <a href="#modules">04 · Interactive modules</a>
-      </nav>
-
-      <!-- CASE STUDY 1 -->
-      <article class="cs" id="cs1" aria-labelledby="cs1-h">
+      <article class="cs" id="cs-capstone" aria-labelledby="cs-capstone-h">
         <div class="cs-head">
           <div>
-            <p class="eyebrow">Case study 01</p>
-            <h3 id="cs1-h">AI Adoption Training for District Educators</h3>
+            <p class="eyebrow">Case study</p>
+            <h3 id="cs-capstone-h">Enhancing AI Proficiency: An Interactive Course for Learners with Basic Digital Literacy</h3>
             <p class="label">— Business problem</p>
-            <p class="lead">A district mandate to build a foundation for AI adoption among educators. Staff had no shared starting point for using AI to reduce workload, and leadership needed a way to introduce it at scale.</p>
+            <p class="lead">Many working adults can use a laptop and a phone but have never used AI at work. They know it matters. They don't know how to prompt it, when to trust it, or where it fits in their job. I built a one-hour course to close that gap and studied whether it worked.</p>
           </div>
           <figure class="frame">
-            <div class="bar"><i></i><i></i><i></i><span>Recreated sample</span></div>
-            <a class="zoom" href="images/cs1-deck-1-title.webp" target="_blank" rel="noopener"><img src="images/cs1-deck-1-title.webp" width="1400" height="788" decoding="async" alt="Title slide: Leave with two working prompts."><span class="hint">Enlarge</span></a>
-            <figcaption>Deck, slide 1. Recreated sample.</figcaption>
+            <div class="bar"><i></i><i></i><i></i><span>Course screenshot</span></div>
+            <a class="zoom" href="images/cap-assignment.webp" target="_blank" rel="noopener"><img src="images/cap-assignment.webp" width="959" height="613" loading="lazy" decoding="async" alt="Canvas assignment page titled Hands on project, with instructions to write a first ChatGPT prompt and a linked ChatGPT workflow."><span class="hint">Enlarge</span></a>
+            <figcaption>The hands-on project. Learners write a real prompt in ChatGPT and submit it.</figcaption>
           </figure>
         </div>
 
         <div class="facts">
-          <div class="fact"><p class="label">— Audience</p><p>District-wide and mixed: classroom teachers across grade levels and subjects, school administrators, and district instructional leadership.</p></div>
-          <div class="fact"><p class="label">— Constraints</p><p>One 45-minute session. No advance information about attendees' subjects or AI experience. No built-in follow-up time. The content had to work for complete beginners and advanced users in the same room.</p></div>
-          <div class="fact"><p class="label">— My role</p><p>Sole instructional designer and facilitator. I hold SchoolAI's Educator Certification (Level 2). The district approved the session from my brief, and I produced the design, content, and delivery myself.</p></div>
+          <div class="fact"><p class="label">— Audience</p><p>Working professionals, educators, and students, roughly 20 to 50. Comfortable with Microsoft Office, minimal AI experience, and motivated by the job market. They want practical use, not theory.</p></div>
+          <div class="fact"><p class="label">— Constraints</p>
+            <ul>
+              <li>One hour of seat time, self-paced, delivered in Canvas.</li>
+              <li>Learners range from "never opened ChatGPT" to "solid foundation," so the course had to work for both.</li>
+              <li>15 participants, adults 18 to 40, recruited through the WGU_Education subreddit. Data was collected anonymously.</li>
+            </ul>
+          </div>
+          <div class="fact"><p class="label">— My role</p><p>Sole author. I wrote the problem analysis and literature review, designed and built the course, ran the study, and analyzed the results.</p></div>
         </div>
 
         <div class="story">
           <div>
             <h4>Approach</h4>
-            <p>I used backward design, starting from one outcome and building everything else to reach it: every attendee leaves with two working AI prompts built from the TEKS they teach, one for a project-based assignment and one for a formative assignment. To differentiate for a room with no shared starting point, I built a three-path structure (beginner, intermediate, advanced) that let people enter at their level while ending at the same outcome. I taught one transferable skill, prompting the AI to improve its own prompt, so the learning outlasts the session. I piloted the session with a fellow educator, revised from their notes, and got it approved by the district.</p>
+            <p>I compared three solutions: a full online course, a short bootcamp, and self-paced microlearning. I chose an interactive online course because it could cover AI basics, tool practice, and decision-making in one place, which microlearning could not do.</p>
+            <p>The course has three goals, each with its own assessment. Learners explain core AI concepts (5-question quiz), use AI tools on a real task (a hands-on project where they write a prompt and submit the result), and judge when and how to use AI in their own work (scenario questions and a summative quiz).</p>
+            <p>Mixed learner levels shaped the design. The course opens with AI fundamentals so everyone starts from the same place. Each tool is introduced with a screen recording and a step-by-step guide. Learners who already know the tools can use linked resources to take on harder tasks.</p>
+            <p>To measure it, I used Canvas pre and post assessments, a 20-item Likert survey, and 10 open-ended questions, all collected through Canvas and Google Forms. Two research questions drove the study: how learners rated usability and engagement, and how much their practical AI skills improved.</p>
           </div>
           <figure class="frame">
-            <div class="bar"><i></i><i></i><i></i><span>Recreated from memory</span></div>
-            <a class="zoom" href="images/cs1-process.webp" target="_blank" rel="noopener"><img src="images/cs1-process.webp" width="1800" height="1125" loading="lazy" decoding="async" alt="Process diagram. The session was designed backward: outcome first, intro last. Open, orient, pick one of three paths, and finish with two working prompts."><span class="hint">Enlarge</span></a>
-            <figcaption>Process diagram: the session designed backward from the outcome.</figcaption>
+            <a class="zoom" href="images/cap-survey.webp" target="_blank" rel="noopener"><img src="images/cap-survey.webp" width="962" height="614" loading="lazy" decoding="async" alt="Course evaluation survey embedded in the conclusion module, with 1 to 5 rating questions on platform usability, assessment fairness, and time commitment."><span class="hint">Enlarge</span></a>
+            <figcaption>The course evaluation survey that closes the course.</figcaption>
           </figure>
-        </div>
-
-        <div class="callout">
-          <p class="label">— Evidence of impact</p>
-          <p>I followed up individually with attendees using the sign-in sheet. Most reported using at least one AI-assisted workflow within the week, and the feedback was strongly positive. The district's lead media specialist also sought me out afterward to say the session was practical. I did not run a formal survey, so these are reports I heard directly.</p>
         </div>
 
         <div class="gallery-wrap">
           <h4 style="margin-bottom: 14px;">Deliverables</h4>
-          <p>A slide deck and a one-page takeaway with both prompt templates. The originals are district material and I no longer have them, so the samples below are recreated.</p>
-          <div class="gallery">
-            <figure class="frame crop">
-              <a class="zoom" href="images/cs1-deck-4-paths.webp" target="_blank" rel="noopener"><img src="images/cs1-deck-4-paths.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide: Pick the path that fits you, with Beginner, Intermediate, and Advanced cards."><span class="hint">Enlarge</span></a>
-              <figcaption>Deck, slide 4: the three paths. Recreated sample.</figcaption>
-            </figure>
-            <figure class="frame crop">
-              <a class="zoom" href="images/cs1-deck-6-advanced.webp" target="_blank" rel="noopener"><img src="images/cs1-deck-6-advanced.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide comparing a basic prompt with a more advanced version of the same prompt."><span class="hint">Enlarge</span></a>
-              <figcaption>Deck, slide 6: a prompt made more advanced. Recreated sample.</figcaption>
-            </figure>
-            <figure class="frame crop">
-              <a class="zoom" href="images/cs1-takeaway.webp" target="_blank" rel="noopener"><img src="images/cs1-takeaway.webp" width="1200" height="1553" loading="lazy" decoding="async" alt="One-page takeaway with two fill-in-the-brackets prompt templates and a line that asks the AI to improve the prompt."><span class="hint">Enlarge</span></a>
-              <figcaption>One-page takeaway (enlarge for the full page). Recreated sample.</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <div class="learned">
-          <h4 style="margin-bottom: 14px;">What I learned</h4>
-          <p>Designing for adults is a different job than designing for students. Adults often carry real apprehension about new technology, even when they use it daily. Running the session through with a peer before delivery showed me the value of outside review when you are designing for an audience you cannot fully see in advance.</p>
-        </div>
-      </article>
-
-      <!-- CASE STUDY 2 -->
-      <article class="cs" id="cs2" aria-labelledby="cs2-h">
-        <div class="cs-head">
-          <div>
-            <p class="eyebrow">Case study 02</p>
-            <h3 id="cs2-h">Canvas LMS Course Templates and Reusable AI Workflows</h3>
-            <p class="label">— Business problem</p>
-            <p class="lead">Losing Canvas's built-in design tool removed any way to build course pages with a consistent instructional structure. Without a system, each teacher built pages individually, so students moving between teachers hit a different layout, a different placement of objectives, and a different assignment structure every time.</p>
-          </div>
-          <figure class="frame">
-            <div class="bar"><i></i><i></i><i></i><span>Recreated</span></div>
-            <a class="zoom" href="images/cs2-system.webp" target="_blank" rel="noopener"><img src="images/cs2-system.webp" width="1800" height="950" decoding="async" alt="System diagram. Skill 1 sets up the brand folder. Skill 2 reads that folder and builds an assignment page and a submission page."><span class="hint">Enlarge</span></a>
-            <figcaption>System diagram: two skills that turn a program's brand into Canvas pages.</figcaption>
-          </figure>
-        </div>
-
-        <div class="facts">
-          <div class="fact"><p class="label">— Audience</p><p>Three teachers piloting the system and giving ongoing feedback, plus other teachers across the district who saw it and adapted it with their own AI tools, with mixed results.</p></div>
-          <div class="fact"><p class="label">— Constraints</p><p>Canvas allows HTML but not CSS, so the templates had to be built from structural HTML. That is a real barrier for teachers who are uncomfortable with code, since any edit risks breaking the layout. I also had to work around district media policy and use the district's designated video system instead of direct embeds.</p></div>
-          <div class="fact"><p class="label">— My role</p><p>Fully self-directed. I identified the efficiency and systems gap myself and took ownership of solving it without being assigned.</p></div>
-        </div>
-
-        <div class="story solo-col">
-          <div>
-            <h4>Approach</h4>
-            <p>I used AI to build a program-specific brand system, giving it Canvas's allowed HTML structure and each module's required elements (objectives, TEKS, standard lesson-planning components). I standardized on two reusable page templates, an Assignment Page and a Submission Page, so objectives, TEKS, and expectations land in the same place and order on every page regardless of who built it, giving students consistent scaffolding across a program taught by different teachers. I packaged the process into two modular AI skills: one that sets up a course's brand and folder structure, and a second that uses that structure to generate standardized pages. That made the system self-service for other teachers.</p>
-          </div>
+          <ul>
+            <li>One-hour Canvas course, "AI in Digital Literacy," with videos, quizzes, a hands-on project, and a final assessment</li>
+            <li>Problem analysis, solution comparison, and literature review</li>
+            <li>Research design: two research questions, a pre and post assessment, a 20-item Likert survey, and 10 open-ended questions</li>
+            <li>Results analysis with charts and thematic coding of learner comments</li>
+            <li>Proposed second iteration of the course, based on the findings</li>
+          </ul>
         </div>
 
         <div class="callout">
           <p class="label">— Evidence of impact</p>
-          <p>Of the pilot group, one teacher has made the system their core workflow. One adopted it and adapted it into their own version for building Canvas pages. One is still working through it with my direct support, which has given me a real case study in adoption barriers for less tech-comfortable users.</p>
-        </div>
-
-        <div class="gallery-wrap">
-          <h4 style="margin-bottom: 14px;">Deliverables</h4>
-          <p>Two reusable AI skills (brand and structure setup, and Canvas page generation) plus the two standardized page templates they produce. The originals are school material, so the samples below are recreated.</p>
-          <div class="gallery">
-            <figure class="frame crop">
-              <a class="zoom" href="images/cs2-assignment-page.webp" target="_blank" rel="noopener"><img src="images/cs2-assignment-page.webp" width="1400" height="3347" loading="lazy" decoding="async" alt="Canvas assignment page template with objectives, two lesson videos side by side, a day-by-day accordion, deliverables, and resource buttons."><span class="hint">Enlarge</span></a>
-              <figcaption>Assignment Page template (enlarge for the full page). Recreated sample, Canvas-safe HTML.</figcaption>
-            </figure>
-            <figure class="frame crop">
-              <a class="zoom" href="images/cs2-submission-page.webp" target="_blank" rel="noopener"><img src="images/cs2-submission-page.webp" width="1400" height="2312" loading="lazy" decoding="async" alt="Canvas submission page template with objectives, a four-level rubric table, turn-in steps, and resource buttons."><span class="hint">Enlarge</span></a>
-              <figcaption>Submission Page template with rubric (enlarge for the full page). Recreated sample.</figcaption>
-            </figure>
-          </div>
+          <p>This was a small study of 15 learners, so these numbers describe this group and nothing wider.</p>
+          <ul>
+            <li>Average score on the course assessments was 78.57%. 40% of learners scored 100%, and 13.33% scored below 70%.</li>
+            <li>Platform usability and course improvement both averaged 4.06 out of 5. Survey categories ranged from 3.56 to 4.06.</li>
+            <li>Engagement (3.63) and interaction (3.56) scored lowest. Open-ended comments said the same: learners wanted more hands-on practice and real-world cases.</li>
+            <li>Typical comments: "I did not expect to understand this content, but I did," and "I wasn't expecting to learn a lot but learned I can use it a lot, even as a stay at home mom."</li>
+          </ul>
         </div>
 
         <div class="learned">
           <h4 style="margin-bottom: 14px;">What I learned</h4>
-          <p>People find uses for a tool beyond the problem it was built to solve, which is why I test across different users and situations instead of one scenario. Delivering a reusable tool also takes more than building it. Adoption needs ongoing support, not a handoff.</p>
+          <p>Learners found the course clear and easy to use, and the survey told me where it fell short: not enough interaction. That drove the redesign I proposed. It adds instant feedback and auto-grading on practical work, clearer quiz directions such as "Select all that apply," a longer course with slower pacing, and Canvas discussion boards so learners can share their prompts and results with each other.</p>
         </div>
       </article>
-
-      <!-- CASE STUDY 3 -->
-      <article class="cs" id="cs3" aria-labelledby="cs3-h">
-        <div class="cs-head">
-          <div>
-            <p class="eyebrow">Case study 03</p>
-            <h3 id="cs3-h">Just-in-Time Instructional Coaching: Closing AI Skill Gaps for School Staff</h3>
-            <p class="label">— Business problem</p>
-            <p class="lead">Staff across the school kept hitting different walls with Gemini and other AI tools: prompting and iteration technique, building lesson handouts, staying under usage limits, and basic orientation. There was no structured training, so every skill gap had to be diagnosed and closed one person at a time, on the spot.</p>
-          </div>
-          <figure class="frame portrait">
-            <div class="bar"><i></i><i></i><i></i><span>Recreated sample</span></div>
-            <a class="zoom" href="images/cs3-tool-guide.webp" target="_blank" rel="noopener"><img src="images/cs3-tool-guide.webp" width="1200" height="1553" decoding="async" alt="One-page guide titled Which AI tool for which job, listing MagicSchool, SchoolAI, ChatGPT, Claude, Gemini with NotebookLM, and Brisk with what each is best for, and Grok marked as one to skip."><span class="hint">Enlarge</span></a>
-            <figcaption>One-page AI tool guide for educators.</figcaption>
-          </figure>
-        </div>
-
-        <div class="facts">
-          <div class="fact"><p class="label">— Audience</p><p>Five staff members in distinct roles (CTE lead, counselor, instructional coach, 9th grade English teacher, coach), each with a different use case and skill level.</p></div>
-          <div class="fact"><p class="label">— Constraints</p><p>Requests arrived unscheduled, with only minutes available per person alongside a full teaching load. Each conversation started with diagnosing the problem, the person's skill level, and their learning style on the spot.</p></div>
-          <div class="fact"><p class="label">— My role</p><p>Informal instructional coach, unassigned and solo. Colleagues sought me out directly after learning I hold Claude, SchoolAI, and MagicSchool certifications.</p></div>
-        </div>
-
-        <div class="story solo-col">
-          <div>
-            <h4>Approach</h4>
-            <p>I ran a quick needs analysis on the spot: what outcome the person wanted, what they had already tried, and where their actual skill level was, since none of that was known in advance. I suggested a better-fit tool when the gap called for one. I guided with questions instead of taking over the task, and taught one repeatable, transferable move, describe the task and have the AI write the prompt, so the skill would carry into the next problem instead of just the one in front of us. I followed up later to check whether the skill had transferred or whether someone was stuck.</p>
-          </div>
-        </div>
-
-        <div class="story solo-col">
-          <div>
-            <h4>Deliverables</h4>
-            <p>A one-page AI tool guide for educators: which tool fits which job (MagicSchool, SchoolAI, ChatGPT, Claude, Gemini with NotebookLM, and Brisk) and which to skip. It is built to send as a follow-up after a conversation.</p>
-          </div>
-        </div>
-
-        <div class="callout">
-          <p class="label">— Evidence of impact</p>
-          <p>Of the five staff I supported, four reached their goal. Two got there on their own after a check-in. Two got there with guidance, and one of those now asks me for further tips. The fifth asked for hands-on help with a workflow that spans several tools and procedures.</p>
-        </div>
-
-        <div class="learned">
-          <h4 style="margin-bottom: 14px;">What I learned</h4>
-          <p>Most instructional coaching happens outside a structured setting, with no agenda or slide deck to carry the conversation. Credibility comes from how well you know the tools.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="modules" aria-labelledby="modules-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Interactive modules</p>
-        <h2 id="modules-h">Two courses you can try in the browser</h2>
-        <p>Each page embeds the live course with its case study below.</p>
-      </div>
-      <div class="mods">
-        <article class="tile mod">
-          <a class="mod-thumb" href="zom-b-gone.html" tabindex="-1" aria-hidden="true"><img src="images/zbg-cover.webp" width="1200" height="630" loading="lazy" decoding="async" alt="Zom-B-Gone Shelters title card reading &quot;Your shelter arrived empty,&quot; with an unimpressed install tech in a hard hat beside an open, empty backyard shelter while zombies lean over the fence."></a>
-          <div class="mod-body">
-            <p class="eyebrow">Zombie challenge</p>
-            <h3><a href="zom-b-gone.html">Zom-B-Gone Shelters: New Owner Orientation</a></h3>
-            <p class="desc">A branching survival course for the eLearning Heroes zombie challenge. New shelter owners stock a pantry against real Ready.gov math, build a weapon that won't draw the horde, and carry every decision into a five-call final battle.</p>
-            <a class="btn" href="zom-b-gone.html">Try the course and read the case study <span class="arrow" aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="tile mod">
-          <a class="mod-thumb" href="fridge-etiquette.html" tabindex="-1" aria-hidden="true"><img src="images/fe-cover.webp" width="1200" height="630" loading="lazy" decoding="async" alt="Course cover reading Fridge Etiquette, A Shared Responsibility, with Barb smiling intensely beside a banner that says Mandatory, so is joy."></a>
-          <div class="mod-body">
-            <p class="eyebrow">Design challenge</p>
-            <h3><a href="fridge-etiquette.html">Fridge Etiquette: A Shared Responsibility</a></h3>
-            <p class="desc">A refrigerator compliance course built for a design challenge, with deliberately excessive AI-generated content. The jokes live in the assets and the instructional structure stays straight.</p>
-            <a class="btn" href="fridge-etiquette.html">Try the course and read the case study <span class="arrow" aria-hidden="true">→</span></a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="capstone" aria-labelledby="capstone-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Graduate capstone</p>
-        <h2 id="capstone-h">The research behind the work</h2>
-        <p>My WGU capstone: a course I built and the study I ran on it.</p>
-      </div>
-      <div class="mods single">
-        <article class="tile mod wide">
-          <a class="mod-thumb" href="capstone.html" tabindex="-1" aria-hidden="true"><img src="images/cap-cover.webp" width="1200" height="630" loading="lazy" decoding="async" alt="Title card reading Enhancing AI Proficiency, WGU graduate capstone, beside a glowing orange brain on a black background."></a>
-          <div class="mod-body">
-            <p class="eyebrow">WGU capstone</p>
-            <h3><a href="capstone.html">Enhancing AI Proficiency</a></h3>
-            <p class="desc">A one-hour Canvas course that teaches AI basics to adults with basic digital literacy, and a mixed-methods study of 15 learners. Average assessment score 78.57%, usability rated 4.06 out of 5, and a redesign built from what the survey showed.</p>
-            <a class="btn" href="capstone.html">Read the case study <span class="arrow" aria-hidden="true">→</span></a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" aria-labelledby="skills-h">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Skills and tools</p>
-        <h2 id="skills-h">What I work with</h2>
-      </div>
-      <div class="cols">
-        <div>
-          <p class="eyebrow">Skills</p>
-          <h3>Design and delivery</h3>
-          <ul class="list">
-            <li>Backward design</li>
-            <li>Course builds in an LMS</li>
-            <li>Facilitation for adult learners</li>
-            <li>Technology adoption support</li>
-            <li>AI workflow and prompt design</li>
-            <li>Structured HTML for LMS pages</li>
-            <li>Job aids and quick-reference guides</li>
-          </ul>
-        </div>
-        <div>
-          <p class="eyebrow">Tools</p>
-          <h3>What I build with</h3>
-          <ul class="list">
-            <li>Canvas LMS</li>
-            <li>Claude, ChatGPT, Gemini and NotebookLM</li>
-            <li>MagicSchool, SchoolAI, Brisk</li>
-            <li>HTML/CSS/React</li>
-            <li>Adobe Creative Cloud</li>
-            <li>DaVinci Resolve</li>
-            <li>Genially</li>
-            <li>Camtasia</li>
-            <li>Canva</li>
-          </ul>
-        </div>
-        <div>
-          <p class="eyebrow">Credentials</p>
-          <h3>Certifications</h3>
-          <ul class="list">
-            <li>AI Fluency for Educators<small>Claude</small></li>
-            <li>AI Educator, Level 4<small>MagicSchool</small></li>
-            <li>Image Generator course<small>MagicSchool</small></li>
-            <li>Educator Certification, Level 2<small>SchoolAI</small></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact tex tex--grain" aria-labelledby="contact-h">
-    <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2 id="contact-h">Open to Learning Experience Design and Customer Enablement roles</h2>
-      <div class="btns">
-        <a class="btn primary" href="mailto:mike@mikevictorick.com">Email me <span class="arrow" aria-hidden="true">→</span></a>
-        <a class="btn" href="https://www.linkedin.com/in/mikevictorick" target="_blank" rel="noopener">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
-      </div>
-      <p class="addr">mike@mikevictorick.com</p>
     </div>
   </section>
 
@@ -731,7 +528,7 @@ dialog#lb::backdrop { background-color: rgba(14, 13, 11, 0.92); }
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault();
     opener = a;
-    var scope = a.closest('article') || document;
+    var scope = a.closest('article, section') || document;
     group = Array.prototype.slice.call(scope.querySelectorAll('a.zoom'));
     show(group.indexOf(a));
     dlg.showModal();
@@ -783,44 +580,6 @@ dialog#lb::backdrop { background-color: rgba(14, 13, 11, 0.92); }
   }, { passive: true });
 })();
 
-(function () {
-  var csNav = document.querySelector('.cs-nav');
-  if (!csNav) return;
-  var links = Array.prototype.slice.call(csNav.querySelectorAll('a'));
-  var articles = links.map(function (a) {
-    return document.getElementById(a.getAttribute('data-cs'));
-  }).filter(Boolean);
-  if (!articles.length) return;
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      links.forEach(function (a) {
-        a.classList.toggle('active', a.getAttribute('data-cs') === entry.target.id);
-      });
-    });
-  }, { rootMargin: '-45% 0px -45% 0px' });
-
-  articles.forEach(function (el) { observer.observe(el); });
-
-  var ticking = false;
-  function updateStuck() {
-    var top = parseFloat(getComputedStyle(csNav).top) || 0;
-    var r = csNav.getBoundingClientRect();
-    var stuck = r.top <= top + 1 && window.scrollY > 0;
-    csNav.classList.toggle('is-stuck', stuck);
-    var dark = articles.some(function (el) {
-      var b = el.getBoundingClientRect();
-      return b.top <= r.bottom && b.bottom > r.bottom && el.matches('.cs:nth-of-type(even)');
-    });
-    csNav.classList.toggle('on-dark', dark);
-    ticking = false;
-  }
-  window.addEventListener('scroll', function () {
-    if (!ticking) { requestAnimationFrame(updateStuck); ticking = true; }
-  }, { passive: true });
-  updateStuck();
-})();
 </script>
 </body>
 </html>
