@@ -368,6 +368,34 @@ footer p { color: rgba(242, 239, 230, .72); }
 footer a { color: var(--again-bone); }
 .sec-head p.eyebrow, .contact .sec-head p.eyebrow { margin-top: 0; font-size: 12px; line-height: 1.3; }
 h1 { letter-spacing: -0.01em; line-height: 1; }
+/* brand 2026-10-07d: cut-paper slabs behind prose */
+body { overflow-x: clip; }
+.fact, .story > div:not(.frame), .callout, .learned, .slab, .summary .wrap > div:last-child {
+  --fg: var(--again-ink); --fg-2: #2E2A24; --fg-3: var(--again-stone);
+  --accent: var(--again-flare-deep); --again-spring-deep: #007E11;
+  position: relative; background: var(--again-cutout); background-image: none; color: var(--again-ink);
+  border: 0; border-radius: 0; padding: 28px 32px; box-shadow: 0 12px 26px rgba(14, 13, 11, .28);
+}
+.story h4, .learned h4 { color: var(--again-ink); }
+.fact .label, .slab .label { background: var(--again-flare-deep); color: var(--again-bone); }
+.fact:nth-child(odd) { transform: rotate(-.4deg); }
+.fact:nth-child(even) { transform: rotate(.35deg); }
+.story > div:not(.frame) { transform: rotate(-.3deg); }
+.callout { transform: rotate(.25deg); max-width: 880px; }
+.callout .label, .cs:nth-of-type(even) .callout .label { background: var(--again-spring-deep); color: var(--again-bone); }
+.learned { max-width: 780px; transform: rotate(-.25deg); }
+.slab { margin-top: 24px; transform: rotate(.3deg); }
+.slab .lead { margin-top: 10px; }
+.summary .wrap > div:last-child { transform: rotate(.3deg); }
+.slab h4 { color: var(--again-ink); }
+.gallery-wrap.slab { margin-top: 72px; max-width: 780px; }
+.slab ul { margin: 10px 0 0 20px; }
+.sec-head p:not(.eyebrow) { display: inline-block; background: var(--again-cutout); color: var(--again-ink); padding: 18px 24px; box-shadow: 0 12px 26px rgba(14, 13, 11, .28); transform: rotate(-.3deg); }
+@media (max-width: 900px) {
+  .fact, .story > div:not(.frame), .callout, .learned, .slab, .summary .wrap > div:last-child { padding: 22px 20px; }
+  .gallery-wrap.slab { margin-top: 48px; }
+}
+
 @media (max-width: 900px) {
   section { padding: 64px 0; }
   .hero { padding: 56px 0 56px; }
@@ -506,8 +534,8 @@ section.pg-end { padding: 64px 0 0; }
           <div>
             <p class="eyebrow">Case study</p>
             <h3 id="cs4-h">Fridge Etiquette: A Compliance Course Built to Overdo Everything</h3>
-            <p class="label">Business problem</p>
-            <p class="lead">A design challenge brief: Office Manager Barb keeps posting signs about the breakroom fridge, and employees keep leaving spoiled, unlabeled food anyway. The assignment was a refrigerator compliance course built with deliberately excessive AI-generated content, the kind of course that looks polished at first glance and slowly reveals it is doing the absolute most for no reason.</p>
+            <div class="slab"><p class="label">Business problem</p>
+            <p class="lead">A design challenge brief: Office Manager Barb keeps posting signs about the breakroom fridge, and employees keep leaving spoiled, unlabeled food anyway. The assignment was a refrigerator compliance course built with deliberately excessive AI-generated content, the kind of course that looks polished at first glance and slowly reveals it is doing the absolute most for no reason.</p></div>
           </div>
           <figure class="frame">
             <div class="bar"><i></i><i></i><i></i><span>Course cover</span></div>
@@ -541,8 +569,8 @@ section.pg-end { padding: 64px 0 0; }
         </div>
 
         <div class="gallery-wrap">
-          <h4 style="margin-bottom: 14px;">Deliverables</h4>
-          <p>A nine-screen interactive course in a single HTML file, hosted on GitHub Pages. Four AI avatar videos with captions, animated B-roll, a sorting game, three branching case studies, a knowledge check, a certificate (printing disabled by Facilities), and a set of share thumbnails.</p>
+          <div class="slab"><h4 style="margin-bottom: 14px;">Deliverables</h4>
+          <p>A nine-screen interactive course in a single HTML file, hosted on GitHub Pages. Four AI avatar videos with captions, animated B-roll, a sorting game, three branching case studies, a knowledge check, a certificate (printing disabled by Facilities), and a set of share thumbnails.</p></div>
           <div class="gallery two">
             <figure class="frame">
               <a class="zoom" href="images/fe-slop.webp" target="_blank" rel="noopener"><img src="images/fe-slop.webp" width="1400" height="875" loading="lazy" decoding="async" alt="Slop or Not sorting game with a score panel, nine fridge items to sort, and Safe, Toss, and Report to Facilities bins."><span class="hint">Enlarge</span></a>
