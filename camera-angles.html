@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where the Camera Sits | Mike Victorick</title>
+<meta name="description" content="Where the Camera Sits: a 7-slide lesson deck on camera angles, shot size and power for high school film students, with a case study by Mike Victorick.">
+<meta name="theme-color" content="#F0F0E0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet">
+<style>
+/* MICROGRAPHICS tokens (04 Library/Design Systems/MICROGRAPHICS). Green accent only. */
+:root{
+--ink:#0B0B0B;--ink-500:#4A4A4A;--grey-400:#6E6E6E;--grey-300:#ABABAB;--grey-100:#DEDED6;
+--paper:#F0F0E0;--card:#FAFAF2;--green:#00FF41;--green-600:#007A1F;
+--display:"Archivo",Helvetica,Arial,sans-serif;--mono:"IBM Plex Mono",ui-monospace,"Courier New",monospace;
+--hard:2px solid var(--ink);--hair:1px solid var(--ink);
+--sh1:2px 2px 0 var(--ink);--sh2:4px 4px 0 var(--ink);--sh3:6px 6px 0 var(--ink);
+--hatch:repeating-linear-gradient(45deg,var(--ink) 0 2px,transparent 2px 6px);
+--grid:linear-gradient(var(--grey-300) 1px,transparent 1px),linear-gradient(90deg,var(--grey-300) 1px,transparent 1px);
+--ease:cubic-bezier(.2,0,0,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--display);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green-600)}
+a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px;box-shadow:4px 4px 0 var(--green)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.micro{font:500 11px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.faint{color:var(--grey-400)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:var(--hard)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:24px}
+.nav .brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none;font:800 15px/1 var(--display);font-stretch:112%;letter-spacing:-.02em;text-transform:uppercase}
+.nav .brand sup{font:500 9px var(--mono)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav ul a{display:block;padding:8px 12px;border:1px solid transparent;border-radius:4px;color:var(--ink);text-decoration:none;font:600 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.nav ul a:hover{border-color:var(--ink);box-shadow:var(--sh1);transform:translate(-1px,-1px)}
+
+/* poster hero */
+.hero{padding:56px 0 0}
+.hero .tag{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border:var(--hard);border-radius:999px;background:var(--card)}
+.hero .tag i{width:8px;height:8px;border-radius:50%;background:var(--green);border:1px solid var(--ink)}
+.hero h1{margin:22px 0 0;font:800 clamp(52px,10.4vw,140px)/.86 var(--display);font-stretch:112%;letter-spacing:-.04em;text-transform:uppercase}
+.rule{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;margin-top:28px;padding:10px 0;border-top:var(--hair);border-bottom:var(--hair)}
+
+/* intro + plate */
+.intro{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;padding:56px 0 64px}
+.lede{margin:0 0 24px;font-size:20px;line-height:1.5;max-width:56ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:12px 18px;border:var(--hard);border-radius:4px;background:var(--green);color:var(--ink);text-decoration:none;font:600 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;box-shadow:var(--sh1);transition:transform 70ms var(--ease),box-shadow 70ms var(--ease)}
+.btn.ghost{background:var(--card)}
+.btn:hover{color:var(--ink);transform:translate(-1px,-1px);box-shadow:var(--sh2)}
+.btn:active{transform:translate(1px,1px);box-shadow:none}
+.plate{border:var(--hard);border-radius:2px;background:var(--card);box-shadow:var(--sh3);align-self:start}
+.plate-head{display:flex;justify-content:space-between;align-items:stretch;border-bottom:var(--hard)}
+.plate-head h2{margin:0;padding:12px 14px;font:800 22px/1 var(--display);font-stretch:112%;letter-spacing:-.02em;text-transform:uppercase}
+.plate-head .pri{display:grid;place-items:center;min-width:56px;border-left:var(--hard);background:var(--ink);color:var(--green);font:800 30px/1 var(--display)}
+.row{display:flex;justify-content:space-between;gap:16px;padding:9px 14px;border-bottom:var(--hair);font:500 12px/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.row span:first-child{color:var(--grey-400)}
+.row span:last-child{text-align:right}
+.barcode{height:44px;margin:14px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px,var(--ink) 12px 13px,transparent 13px 17px)}
+.plate-foot{display:flex;justify-content:space-between;padding:0 14px 12px}
+
+/* cover */
+.cover{border:var(--hard);background:var(--card);box-shadow:var(--sh2)}
+.cap{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;border-top:var(--hard)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:var(--hard);background:var(--card);margin:0 0 72px}
+.stat{padding:16px 16px 18px;border-left:var(--hair)}
+.stat:first-child{border-left:0}
+.stat b{display:block;margin:10px 0 4px;font:800 56px/.9 var(--display);font-stretch:112%;letter-spacing:-.03em}
+.stat.ink{background:var(--ink);color:var(--paper)}
+.stat.ink .faint{color:var(--grey-300)}
+
+/* sections */
+.sec{padding:0 0 72px}
+.sec-head{display:flex;align-items:baseline;gap:16px;padding-bottom:12px;margin-bottom:28px;border-bottom:var(--hard)}
+.sec-head .idx{font:800 18px/1 var(--mono)}
+.sec-head h2{margin:0;font:800 clamp(30px,4.4vw,52px)/.92 var(--display);font-stretch:112%;letter-spacing:-.03em;text-transform:uppercase}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border:var(--hard);background:var(--card)}
+.fact{padding:18px 18px 20px;border-left:var(--hair)}
+.fact:first-child{border-left:0}
+.fact p{margin:10px 0 0;font-size:15px}
+.prose{display:grid;grid-template-columns:220px 1fr;gap:32px}
+.prose p{margin:0 0 16px;max-width:64ch}
+.steps{list-style:none;margin:0;padding:0;border-top:var(--hard)}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:16px 0;border-bottom:var(--hair)}
+.steps li > span{font:600 12px/1.6 var(--mono);color:var(--grey-400)}
+.steps strong{display:block;font:800 17px/1.2 var(--display);font-stretch:112%;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:4px}
+.steps p{margin:0;max-width:66ch}
+
+/* slide index */
+.slides{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{border:var(--hard);border-radius:2px;background:var(--card);box-shadow:var(--sh2);transition:transform 70ms var(--ease),box-shadow 70ms var(--ease)}
+.card:hover{transform:translate(-1px,-1px);box-shadow:var(--sh3)}
+.card-head{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;border-bottom:var(--hard)}
+.card a{display:block}
+.card .t{padding:12px 12px 14px;font:700 15px/1.3 var(--display)}
+.card.feature{grid-column:1/-1}
+
+/* callout */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border:var(--hard);background:var(--card);padding:20px}
+.box.term{background:#141414;color:var(--paper);border-color:var(--ink)}
+.box.term .faint{color:var(--grey-300)}
+.box p{margin:12px 0 0}
+.box ul{margin:12px 0 0;padding-left:18px}
+.box li{margin:4px 0}
+.hatch{height:14px;background:var(--hatch);border-bottom:var(--hard)}
+
+@media (max-width:860px){
+  .wrap{padding:0 16px}
+  .intro,.prose,.split{grid-template-columns:1fr}
+  .prose{gap:8px}
+  .facts{grid-template-columns:1fr}
+  .fact{border-left:0;border-top:var(--hair)}
+  .fact:first-child{border-top:0}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:var(--hair)}
+  .slides{grid-template-columns:1fr}
+  .nav ul a{padding:8px 6px;font-size:11px}
+  .rule span:nth-child(n+5){display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* footer 2026-10-09: shared on every page. Cells + hairlines from basement.studio, 2px rule from henry.codes, oversized name from egstad.com. Flare only on hover. */
+footer.foot { position: relative; isolation: isolate; padding: 0; background: #0E0D0B; color: #F2EFE6; border: 0; border-top: 2px solid #484139; font-family: "Bricolage Grotesque", Arial, sans-serif; overflow: hidden; }
+footer.foot .foot-in { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: block; }
+footer.foot .foot-top { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); }
+footer.foot .foot-top > * { padding: 44px 28px 40px; border-left: 1px solid #35302A; }
+footer.foot .foot-top > :first-child { border-left: 0; padding-left: 0; }
+footer.foot .foot-home { display: inline-block; line-height: 0; }
+footer.foot .foot-mark { display: block; color: #E64800; flex: none; }
+footer.foot .foot-role { margin: 18px 0 0; max-width: 24ch; font-size: 15px; font-weight: 600; line-height: 1.4; letter-spacing: 0; color: #C9C1B2; }
+footer.foot .foot-h { margin: 0 0 16px; font-size: 12px; font-weight: 600; line-height: 1.3; letter-spacing: .02em; color: #A2978A; }
+footer.foot .foot-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+footer.foot .foot-links a { display: inline-block; padding: 6px 0; font-size: 15px; font-weight: 500; line-height: 1.35; color: #F2EFE6; text-decoration: none; }
+footer.foot .foot-links a:hover, footer.foot .foot-base a:hover { color: #E64800; }
+footer.foot a:focus-visible { outline: 3px solid #E64800; outline-offset: 4px; }
+footer.foot .foot-name { margin: 0; padding: 30px 0 0; border-top: 1px solid #35302A; font-weight: 800; text-transform: uppercase; font-size: min(229px, calc((100vw - 48px) / 4.67)); max-width: none; line-height: .8; letter-spacing: -.03em; font-variation-settings: "opsz" 96, "wdth" 75; color: #35302A; white-space: nowrap; user-select: none; }
+footer.foot .foot-base { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 20px 0 28px; }
+footer.foot .foot-base p { margin: 0; max-width: none; font-size: 12px; font-weight: 500; line-height: 1.6; letter-spacing: 0; color: rgba(242, 239, 230, .72); }
+footer.foot .foot-base a { font-size: 12px; font-weight: 600; color: #F2EFE6; text-decoration: none; }
+@media (max-width: 900px) {
+  footer.foot .foot-top { grid-template-columns: repeat(3, 1fr); }
+  footer.foot .foot-top > :first-child { grid-column: 1 / -1; padding: 36px 0 28px; }
+  footer.foot .foot-top > :nth-child(2) { border-left: 0; padding-left: 0; }
+}
+@media (max-width: 640px) {
+  footer.foot .foot-top { grid-template-columns: 1fr; }
+  footer.foot .foot-top > * { padding: 28px 0; border-left: 0; border-top: 1px solid #35302A; }
+  footer.foot .foot-top > :first-child { border-top: 0; padding: 32px 0 28px; }
+}
+@media (max-width: 900px) {
+  footer.foot .foot-base a { display: inline-block; padding: 12px 0; margin-block: -12px; }
+}
+footer.foot::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: url(textures/scans/grain-72-lift.webp) 0 0 / 600px; opacity: .1; }
+
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html#top" aria-label="Mike Victorick, home"><svg role="img" aria-label="Mike Victorick mark" width="32" height="20" viewBox="0 0 1043.61 660.06" fill="currentColor">
+        <g>
+          <path d="M244.09,16.39c-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.82,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92,5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.81-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92Z"/>
+          <path d="M485.92,16.5c-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.82,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92,5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.81-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92Z"/>
+          <path d="M796.46,643.09c5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.82-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.81,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92Z"/>
+          <path d="M746.92,5.55c-3.93,5.65-.1,13.78,2.44,19.83,20.44,43.59,47.21,100.56,69.59,148.05,18.06,38.34,47.02,99.91,59.88,127.21,3.32,7.18,7.01,13.87,14.31,17.64,9.53,5.12,25.17,5.91,37.16,5.94,9.33.07,18.95-.14,27.77-2.95,19.49-5.53,26.15-26.29,35.42-43.5,10.59-20.7,21.51-41.96,32.01-62.67,6.69-13.79,15.04-27.13,17.52-41.42,2.4-13.15-2.89-25.26-8.44-36.94-14.5-30.83-35.1-76.86-51.57-110.52-3.9-7.48-9.02-15.19-15.69-19.18-5.75-3.55-12.67-4.46-20.65-4.66-17.92-.34-34.98-.57-54.73-.82-32.31-.4-67.55-.8-100.54-1.2-12.96.54-37.36-3.12-44.38,5.08l-.09.11Z"/>
+          <path d="M296.54,654.53c3.94-5.64.11-13.78-2.42-19.83-20.4-43.61-47.12-100.61-69.45-148.12-18.02-38.36-46.93-99.96-59.76-127.26-3.31-7.18-7-13.88-14.29-17.65-9.52-5.13-25.16-5.94-37.15-5.97-9.33-.08-18.95.12-27.78,2.92-19.5,5.52-26.17,26.26-35.46,43.46-10.61,20.69-21.54,41.94-32.07,62.64-6.7,13.79-15.07,27.12-17.55,41.4-2.42,13.14,2.87,25.27,8.4,36.95,14.47,30.84,35.03,76.89,51.47,110.57,3.89,7.48,9,15.19,15.67,19.2,5.75,3.56,12.66,4.48,20.64,4.68,17.92.36,34.98.6,54.73.87,32.31.43,67.54.86,100.54,1.29,12.96-.53,37.35,3.15,44.39-5.04l.09-.11Z"/>
+        </g>
+      </svg><span>Mike Victorick<sup>©</sup></span></a>
+    <nav aria-label="Primary"><ul><li><a href="index.html#work">Work</a></li><li><a href="index.html#skills">Skills</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="tag micro"><i></i>Lesson deck · REF CA-001</span>
+      <h1>Where the<br>camera sits</h1>
+      <div class="rule micro faint"><span>Angles</span><span>Shot size</span><span>Power</span><span>07 slides</span><span>1920 × 1080</span><span>PPTX · PDF</span><span>HS AV production</span><span>Rev. 2026</span></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="intro" aria-label="Overview">
+      <div>
+        <p class="micro faint" style="margin:0 0 14px">Instructional design · Presentation design</p>
+        <p class="lede">A seven-slide lesson that teaches high school film students to choose camera angle and shot size on purpose, so the audience can tell who holds power in a scene.</p>
+        <div class="btns">
+          <a class="btn" href="decks/camera-angles-deck.pdf" target="_blank" rel="noopener">Open the deck ↗</a>
+          <a class="btn ghost" href="#slides">See the slides ↓</a>
+        </div>
+      </div>
+      <div class="plate" role="group" aria-label="Project specification">
+        <div class="plate-head"><h2>Manifest</h2><span class="pri" aria-hidden="true">A</span></div>
+        <div class="row"><span>Format</span><span>Lesson deck</span></div>
+        <div class="row"><span>Slides</span><span>07</span></div>
+        <div class="row"><span>Audience</span><span>HS AV production</span></div>
+        <div class="row"><span>Design system</span><span>THE 90s</span></div>
+        <div class="row"><span>Files</span><span>PPTX · PDF</span></div>
+        <div class="row"><span>Accessibility</span><span>Alt text · notes</span></div>
+        <div class="row"><span>Status</span><span>Not yet taught</span></div>
+        <div class="barcode" aria-hidden="true"></div>
+        <div class="plate-foot micro faint" aria-hidden="true"><span>CA-001</span><span>Mike Victorick</span></div>
+      </div>
+    </section>
+
+    <figure class="cover" style="margin:0 0 40px">
+      <img src="images/ca-cover.webp" width="1200" height="675" alt="Project thumbnail reading Where the Camera Sits, Angles, Shot Size and Power, beside a card that stacks camera heights above, level and below, and asks who holds power in the frame.">
+      <figcaption class="cap micro"><span>Fig. 01 · Project thumbnail</span><span class="faint">THE 90s</span></figcaption>
+    </figure>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><span class="micro faint">01 · Slides</span><b>07</b><span class="micro faint">One idea each</span></div>
+      <div class="stat" role="listitem"><span class="micro faint">02 · Films</span><b>09</b><span class="micro faint">Titles cited</span></div>
+      <div class="stat" role="listitem"><span class="micro faint">03 · Lines</span><b>06</b><span class="micro faint">Shot twice</span></div>
+      <div class="stat ink" role="listitem"><span class="micro faint">04 · QA</span><b>7/7</b><span class="micro faint">Slides passed</span></div>
+    </div>
+
+    <section class="sec" aria-labelledby="h-brief">
+      <div class="sec-head"><span class="idx">01</span><h2 id="h-brief">The brief</h2></div>
+      <div class="facts">
+        <div class="fact"><span class="micro faint">Problem</span><p>Film students learn the names of camera angles fast. Picking one on purpose comes much later. Most first shoots happen at eye level because that is where the tripod ends up.</p></div>
+        <div class="fact"><span class="micro faint">Audience</span><p>High school students in a CTE AV production or film course. Some have shot on their phones for years and some have never framed a shot.</p></div>
+        <div class="fact"><span class="micro faint">My role</span><p>I wrote the brief, approved the outline, chose the assessment and own the final copy. The slides were built with an AI-assisted pipeline I set up, with an automated QA check on every render.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="h-obj">
+      <div class="sec-head"><span class="idx">02</span><h2 id="h-obj">Objective</h2></div>
+      <div class="prose">
+        <p class="micro faint">Measurable outcome</p>
+        <div><p style="font-size:20px;line-height:1.45">By the end of the unit, students choose camera height and shot size on purpose so the audience can tell who holds power in a scene. They show it by shooting one short exchange twice with the power flipped.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="h-app">
+      <div class="sec-head"><span class="idx">03</span><h2 id="h-app">Approach</h2></div>
+      <ol class="steps">
+        <li><span>03.1</span><div><strong>Clip first, vocabulary second</strong><p>The lesson opens on the Prague restaurant scene from <cite>Mission: Impossible</cite> (1996). The lines stay the same while the camera drops lower and tilts as Ethan works out that Kittredge is lying. Students say what changed before they learn the terms for it.</p></div></li>
+        <li><span>03.2</span><div><strong>One idea per slide</strong><p>Low angle, high angle, overhead and Dutch, shot size, then how size and angle build across a scene, then three questions to ask before every setup.</p></div></li>
+        <li><span>03.3</span><div><strong>A real film behind every term</strong><p><cite>Citizen Kane</cite>, <cite>The Ring</cite>, <cite>Casino</cite>, <cite>The Master</cite>, <cite>12 Years a Slave</cite> and <cite>Westworld</cite>, pulled from a NotebookLM notebook built on StudioBinder's breakdowns and tagged in the speaker notes.</p></div></li>
+        <li><span>03.4</span><div><strong>The rule gets complicated on purpose</strong><p>In <cite>Citizen Kane</cite> the extreme low angle on Kane after the election plays as defeat. The angle sets size. The scene decides what that size means.</p></div></li>
+        <li><span>03.5</span><div><strong>Differentiation in the notes</strong><p>Students below level get a shot list with sizes filled in and choose only the angles. Students ahead add one Dutch angle and justify it in writing. Everyone ends with an exit ticket: one shot, its size, its angle and the reason.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="sec" aria-labelledby="h-assess">
+      <div class="sec-head"><span class="idx">04</span><h2 id="h-assess">Assessment</h2></div>
+      <div class="split">
+        <div class="box">
+          <span class="micro faint">Performance task</span>
+          <p>Pairs write a six-line exchange and shoot it twice. In version A one character holds the power. In version B it flips. Same lines, same actors. Only the angles and shot sizes change.</p>
+          <p>The class watches both versions, names who holds power in each and points to the shot that shows it. If they can't tell, the pair reshoots one setup.</p>
+        </div>
+        <div class="box term">
+          <span class="micro faint">Before every setup · Slide 07</span>
+          <ul class="micro" style="font-size:13px;line-height:1.7;letter-spacing:.06em">
+            <li>Who holds the power in this moment?</li>
+            <li>Where does the camera sit to show it?</li>
+            <li>How close should the audience be?</li>
+          </ul>
+          <p class="micro faint" style="margin-top:16px">Shot list columns: size · angle · reason_</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="slides" aria-labelledby="h-slides">
+      <div class="sec-head"><span class="idx">05</span><h2 id="h-slides">Slide index</h2></div>
+      <div class="slides">
+        <article class="card feature"><div class="card-head micro"><span>Slide 01</span><span class="faint">CA-001.01</span></div><a href="images/ca-s01.webp" target="_blank" rel="noopener"><img src="images/ca-s01.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 1: The camera decides who looks strong. Three stacked boxes showing camera heights. Low angle: looking up, the subject reads strong. Eye level: straight on, equal footing. High angle: looking down, the subject reads small."></a><p class="t">The camera decides who looks strong.</p></article>
+        <article class="card"><div class="card-head micro"><span>Slide 02</span><span class="faint">CA-001.02</span></div><a href="images/ca-s02.webp" target="_blank" rel="noopener"><img src="images/ca-s02.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 2: Low angle: looking up gives a character power. Diagram with the camera at the bottom, below the eyeline and tilted up, and an arrow pointing up to the subject, who towers over the viewer."></a><p class="t">Low angle: looking up gives a character power.</p></article>
+        <article class="card"><div class="card-head micro"><span>Slide 03</span><span class="faint">CA-001.03</span></div><a href="images/ca-s03.webp" target="_blank" rel="noopener"><img src="images/ca-s03.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 3: High angle: looking down takes it away. Diagram with the camera at the top, above the eyeline and tilted down, and an arrow pointing down to the subject, who shrinks into the frame."></a><p class="t">High angle: looking down takes it away.</p></article>
+        <article class="card"><div class="card-head micro"><span>Slide 04</span><span class="faint">CA-001.04</span></div><a href="images/ca-s04.webp" target="_blank" rel="noopener"><img src="images/ca-s04.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 4: Overhead shots watch. Dutch angles unsettle. Two boxes. Overhead: straight down, the audience watches from above. Dutch: horizon off level, something is off. The Dutch box is drawn tilted."></a><p class="t">Overhead shots watch. Dutch angles unsettle.</p></article>
+        <article class="card"><div class="card-head micro"><span>Slide 05</span><span class="faint">CA-001.05</span></div><a href="images/ca-s05.webp" target="_blank" rel="noopener"><img src="images/ca-s05.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 5: Shot size sets how close the audience feels. Four stacked boxes for shot sizes. Wide shot: whole body and the room around it. Medium shot: waist up, neutral. Close-up: the face fills the frame. Extreme close-up: one detail such as eyes or hands."></a><p class="t">Shot size sets how close the audience feels.</p></article>
+        <article class="card"><div class="card-head micro"><span>Slide 06</span><span class="faint">CA-001.06</span></div><a href="images/ca-s06.webp" target="_blank" rel="noopener"><img src="images/ca-s06.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 6: Move in as the tension rises. Three stacked boxes joined by downward arrows: Wide, setup, where are we; Medium, rising action, who wants what; Close-up, climax, what do they feel."></a><p class="t">Move in as the tension rises.</p></article>
+        <article class="card"><div class="card-head micro"><span>Slide 07</span><span class="faint">CA-001.07</span></div><a href="images/ca-s07.webp" target="_blank" rel="noopener"><img src="images/ca-s07.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 7: Ask three questions before every setup. Sample shot list entry. Shot 04A, two-shot in cowboy framing. Angle: low on character A, who takes control here. Angle: high on character B, who loses the argument. Shot list columns: size, angle, reason."></a><p class="t">Ask three questions before every setup.</p></article>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="h-design">
+      <div class="sec-head"><span class="idx">06</span><h2 id="h-design">Design and accessibility</h2></div>
+      <div class="prose">
+        <p class="micro faint">THE 90s design system</p>
+        <div>
+          <p>Near-black ground, monospace type, hard offset shadows, and an accent color that changes slide to slide. Every slide runs the same grid: title row, bullet panel on the left, diagram card on the right, source line, footer.</p>
+          <p>Each diagram reads without color. Camera heights are labeled BELOW, LEVEL and ABOVE, and the Dutch angle box is drawn tilted. Every slide image carries alt text, and the PPTX has full speaker notes on all seven slides.</p>
+          <p>Every slide passed the QA script for layout, type scale, focal point, accent use and contrast. Four slides failed the first pass because single words were wrapping onto their own line. I rewrote those bullets shorter and they passed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="h-out">
+      <div class="sec-head"><span class="idx">07</span><h2 id="h-out">Outcome</h2></div>
+      <div class="split">
+        <div class="box"><span class="micro faint">Evidence of impact</span><p>Not taught yet. This is a portfolio build. The flipped-power shoot is the test: if the class can name who holds power from the frames alone, the lesson worked.</p></div>
+        <div class="box"><span class="micro faint">What I learned</span><p>An automated check catches things I miss at a glance, like one word stranded on its own line. Short bullets fixed it every time, and the slides read faster for it.</p></div>
+      </div>
+      <div class="btns" style="margin-top:28px">
+        <a class="btn" href="decks/camera-angles-deck.pdf" target="_blank" rel="noopener">Open the deck ↗</a>
+        <a class="btn ghost" href="index.html#work">Back to the work</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot site-foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-id">
+        <a class="foot-home" href="index.html#top" aria-label="Mike Victorick, home"><svg class="foot-mark" role="img" aria-label="Mike Victorick mark" width="44" height="28" viewBox="0 0 1043.61 660.06" fill="currentColor">
+        <g>
+          <path d="M244.09,16.39c-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.82,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92,5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.81-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92Z"/>
+          <path d="M485.92,16.5c-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.82,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92,5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.81-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92Z"/>
+          <path d="M796.46,643.09c5.09,10.08,11.55,12.8,25.1,14.35,7.46.34,15.04.57,22.7.72,32.43-.86,41.74-11.49,56.79-44.18,9.89-20.14,19.71-40.92,29.32-61.12,6.77-14.98,15.94-31.39,19.82-44.81,1.73-5.93,1.86-12.32-.15-17.63-36.49-81.19-182.01-388.28-222.29-473.92-5.09-10.08-11.55-12.8-25.1-14.35-7.46-.34-15.04-.57-22.7-.72-32.43.86-41.74,11.49-56.79,44.18-9.89,20.14-19.71,40.92-29.32,61.12-6.77,14.98-15.94,31.39-19.81,44.81-1.73,5.93-1.86,12.32.15,17.63,36.49,81.19,182.01,388.28,222.29,473.92Z"/>
+          <path d="M746.92,5.55c-3.93,5.65-.1,13.78,2.44,19.83,20.44,43.59,47.21,100.56,69.59,148.05,18.06,38.34,47.02,99.91,59.88,127.21,3.32,7.18,7.01,13.87,14.31,17.64,9.53,5.12,25.17,5.91,37.16,5.94,9.33.07,18.95-.14,27.77-2.95,19.49-5.53,26.15-26.29,35.42-43.5,10.59-20.7,21.51-41.96,32.01-62.67,6.69-13.79,15.04-27.13,17.52-41.42,2.4-13.15-2.89-25.26-8.44-36.94-14.5-30.83-35.1-76.86-51.57-110.52-3.9-7.48-9.02-15.19-15.69-19.18-5.75-3.55-12.67-4.46-20.65-4.66-17.92-.34-34.98-.57-54.73-.82-32.31-.4-67.55-.8-100.54-1.2-12.96.54-37.36-3.12-44.38,5.08l-.09.11Z"/>
+          <path d="M296.54,654.53c3.94-5.64.11-13.78-2.42-19.83-20.4-43.61-47.12-100.61-69.45-148.12-18.02-38.36-46.93-99.96-59.76-127.26-3.31-7.18-7-13.88-14.29-17.65-9.52-5.13-25.16-5.94-37.15-5.97-9.33-.08-18.95.12-27.78,2.92-19.5,5.52-26.17,26.26-35.46,43.46-10.61,20.69-21.54,41.94-32.07,62.64-6.7,13.79-15.07,27.12-17.55,41.4-2.42,13.14,2.87,25.27,8.4,36.95,14.47,30.84,35.03,76.89,51.47,110.57,3.89,7.48,9,15.19,15.67,19.2,5.75,3.56,12.66,4.48,20.64,4.68,17.92.36,34.98.6,54.73.87,32.31.43,67.54.86,100.54,1.29,12.96-.53,37.35,3.15,44.39-5.04l.09-.11Z"/>
+        </g>
+      </svg></a>
+        <p class="foot-role">Learning Experience Designer</p>
+      </div>
+      <nav aria-label="Courses">
+        <p class="foot-h">Interactive modules</p>
+        <ul class="foot-links">
+            <li><a href="modules/forward-motion/">From Frustration to Forward Motion</a></li>
+            <li><a href="zom-b-gone.html">Zom-B-Gone Shelters</a></li>
+            <li><a href="fridge-etiquette.html">Fridge Etiquette</a></li>
+            <li><a href="capstone.html">Enhancing AI Proficiency</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Site">
+        <p class="foot-h">Site</p>
+        <ul class="foot-links">
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="foot-h">Contact</p>
+        <ul class="foot-links">
+          <li><a href="mailto:mike@mikevictorick.com">mike@mikevictorick.com</a></li>
+          <li><a href="https://www.linkedin.com/in/mikevictorick" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-name" aria-hidden="true">Mike Victorick</p>
+    <div class="foot-base">
+      <p>| All Rights Reserved | ©2026 Mike Victorick</p>
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

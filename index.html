@@ -568,6 +568,7 @@ html.nav-away .cs-nav { top: 8px; }
         <a href="#cs1" data-cs="cs1">Adoption</a>
         <a href="#cs2" data-cs="cs2">LMS</a>
         <a href="#cs3" data-cs="cs3">Coaching</a>
+        <a href="#cs4" data-cs="cs4">Deck assistant</a>
         <a href="#modules" data-cs="modules">Interactive modules</a>
         <a href="#capstone" data-cs="capstone">Graduate capstone</a>
       </nav>
@@ -735,6 +736,65 @@ html.nav-away .cs-nav { top: 8px; }
         <div class="learned">
           <h4 style="margin-bottom: 14px;">What I learned</h4>
           <p>Most instructional coaching happens outside a structured setting, with no agenda or slide deck to carry the conversation. Credibility comes from how well you know the tools.</p>
+        </div>
+      </article>
+
+      <!-- CASE STUDY 4 -->
+      <article class="cs" id="cs4" aria-labelledby="cs4-h">
+        <div class="cs-head">
+          <div>
+            <p class="eyebrow">Case study</p>
+            <h3 id="cs4-h">Slide Deck Design Assistant: From Lesson Outline to Finished Deck</h3>
+            <div class="slab"><p class="label">Business problem</p>
+            <p class="lead">Teachers build slides in whatever time is left after planning the lesson. AI slide tools are fast, but their output looks the same every time: a flat background, one accent color, boxes of equal size and no clear focal point. I wanted a way to go from a lesson outline to a designed, accessible deck without spending a conference period moving boxes around.</p></div>
+          </div>
+          <figure class="frame">
+            <div class="bar"><i></i><i></i><i></i><span>Sample output</span></div>
+            <a class="zoom" href="images/ca-s01.webp" target="_blank" rel="noopener"><img src="images/ca-s01.webp" width="1400" height="788" decoding="async" alt="Slide 1 of the camera angles deck: The camera decides who looks strong. Three stacked boxes for low angle, eye level and high angle."><span class="hint">Enlarge</span></a>
+            <figcaption>Camera angles deck, slide 1. Built with the assistant.</figcaption>
+          </figure>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><p class="label">Audience</p><p>Teachers who build their own slides. I am the first user: a high school AV production teacher with four preps.</p></div>
+          <div class="fact"><p class="label">Constraints</p><p>Decks have to open in PowerPoint and Google Slides, so the output is a PPTX and a PDF. Every slide needs alt text and speaker notes. AI image tools can't render reliable text, so every word on a slide has to be real type.</p></div>
+          <div class="fact"><p class="label">My role</p><p>Sole designer and builder. I built the assistant in Claude Code: the design systems, the layout rules and the QA checks. I write the lesson brief and approve the slide plan before anything builds.</p></div>
+        </div>
+
+        <div class="story solo-col">
+          <div>
+            <h4>Approach</h4>
+            <p>I listed what makes AI graphics look generic and wrote a check for each one. The assistant works from a library of nine design systems, from a screenprint look to my school's Falcon Studios brand. Each system has its own recurring marks and a list of things it never does. For each slide it picks a layout before writing any markup, builds the slide in HTML, renders it and runs a QA script that measures layout uniformity, type scale, focal point, accent use and contrast. A failing slide gets rebuilt, up to three tries. After that it stops and tells me what is wrong, and it never loosens a threshold to pass. Every number on a slide has to come from my brief, and film and source facts are tagged in the speaker notes. Finished slides export to PPTX with alt text and speaker notes attached, plus a PDF.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p class="label">Evidence of impact</p>
+          <p>Two seven-slide lesson decks so far, and all 14 slides pass every QA check. On the DaVinci Resolve deck, four slides failed the first pass because the titles were too small to anchor the slide. On the camera angles deck, four failed because single words were wrapping onto their own line. Both were fixed and passed. Neither deck has been taught yet.</p>
+        </div>
+
+        <div class="gallery-wrap">
+          <div class="slab"><h4 style="margin-bottom: 14px;">Deliverables</h4>
+          <p>The assistant, a reusable Claude Code skill with nine design systems and the QA script, plus two lesson decks built with it: camera angles and shot size for film students, and post-production in DaVinci Resolve. <a href="camera-angles.html">See the full camera angles deck and its lesson case study <span class="arrow" aria-hidden="true">&rarr;</span></a></p></div>
+          <div class="gallery">
+            <figure class="frame crop">
+              <a class="zoom" href="images/ca-s07.webp" target="_blank" rel="noopener"><img src="images/ca-s07.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 7 of the camera angles deck: Ask three questions before every setup, with a sample shot list entry for size, angle and reason."><span class="hint">Enlarge</span></a>
+              <figcaption>Camera angles deck, slide 7: the shot list.</figcaption>
+            </figure>
+            <figure class="frame crop">
+              <a class="zoom" href="images/rp-s01.webp" target="_blank" rel="noopener"><img src="images/rp-s01.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 1 of the DaVinci Resolve deck: Post-production turns your footage into a finished film, with a three-step path from footage to rough cut to final film."><span class="hint">Enlarge</span></a>
+              <figcaption>DaVinci Resolve deck, slide 1.</figcaption>
+            </figure>
+            <figure class="frame crop">
+              <a class="zoom" href="images/rp-s04.webp" target="_blank" rel="noopener"><img src="images/rp-s04.webp" width="1400" height="788" loading="lazy" decoding="async" alt="Slide 4 of the DaVinci Resolve deck: The rough cut puts your storyboard on the timeline, with four storyboard frames above a timeline."><span class="hint">Enlarge</span></a>
+              <figcaption>DaVinci Resolve deck, slide 4: storyboard to timeline.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="learned">
+          <h4 style="margin-bottom: 14px;">What I learned</h4>
+          <p>A design rule only holds if something checks it. Writing the checks took longer than writing the style guides, and the checks are what keep the slides from drifting back to generic.</p>
         </div>
       </article>
 
