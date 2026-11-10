@@ -1,0 +1,62 @@
+/* LXD theme for camera-angles.html. That page has its own token names (the earlier MICROGRAPHICS green version),
+   so the tokens move to the LXD palette: ice ground, ink, yellow accent, hard ink shadows. */
+:root {
+  --ink: #0F1418; --ink-500: #4A5866; --grey-400: #4A5866; --grey-300: #9AA6B2; --grey-100: #D6E2EC;
+  --paper: #E1EFFA; --card: #F2F7FB; --green: #E3D84C; --green-600: #0F1418;
+  --display: "Archivo", Helvetica, Arial, sans-serif; --mono: "IBM Plex Mono", ui-monospace, "Courier New", monospace;
+  --sh1: 2px 2px 0 #0F1418; --sh2: 4px 4px 0 #0F1418; --sh3: 6px 6px 0 #0F1418;
+}
+a { color: #0F1418; text-decoration: underline; text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid #0F1418; outline-offset: 2px; box-shadow: none; }
+.nav .brand svg { width: 104px; height: auto; color: var(--ink); }
+.hero .tag i { border-radius: 0; }
+.btn { color: #0F1418; }
+.plate-head .pri { background: #0F1418; color: #E3D84C; }
+.stat.ink { background: #0F1418; color: #E3D84C; }
+.stat.ink .faint { color: #C3CED8; }
+.box.term { background: #2A3642; color: #E1EFFA; border-color: #0F1418; }
+.box.term .faint { color: #C3CED8; }
+.hatch { background: repeating-linear-gradient(45deg, #0F1418 0 2px, transparent 2px 6px); }
+
+/* footer: full-bleed ink with ice text, same as the rest of the site */
+footer.foot { background: #0F1418; color: #E1EFFA; border: 0; border-top: 2px solid #0F1418; }
+footer.foot .foot-mark { color: #E1EFFA; width: 120px; height: auto; }
+footer.foot .foot-top > * { border-left-color: #2A3642; }
+footer.foot .foot-role { color: #C3CED8; font: 600 12px/1.4 "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+footer.foot .foot-h { color: #9AA6B2; font: 600 11px/1.3 "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+footer.foot, footer.foot .foot-links a, footer.foot .foot-base a { font-family: "Archivo", Helvetica, Arial, sans-serif; color: #E1EFFA; }
+footer.foot .foot-links a:hover, footer.foot .foot-base a:hover { color: #E3D84C; }
+footer.foot a:focus-visible { outline: 2px solid #E3D84C; outline-offset: 4px; }
+footer.foot .foot-name { border-top-color: #2A3642; color: #2A3642; font-family: "Archivo", Helvetica, Arial, sans-serif; font-weight: 800; font-stretch: 112%; font-variation-settings: normal; letter-spacing: -.04em; font-size: min(120px, calc((100vw - 48px) / 10.2)); }
+footer.foot .foot-base p { color: #9AA6B2; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: .04em; }
+@media (max-width: 640px) { footer.foot .foot-top > * { border-top-color: #2A3642; } }
+
+/* theme toggle and invert (ink and ice swap) */
+.theme-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 6px 10px; cursor: pointer; font: 600 11px/1 "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: var(--card); border: 2px solid var(--ink); border-radius: 4px; box-shadow: 2px 2px 0 var(--ink); transition: transform 70ms cubic-bezier(.2,0,0,1), box-shadow 70ms cubic-bezier(.2,0,0,1); }
+.theme-toggle:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--ink); }
+.theme-toggle:active { transform: translate(1px,1px); box-shadow: none; }
+.theme-toggle svg { width: 14px; height: 14px; }
+.nav ul { align-items: center; }
+html[data-theme="invert"] {
+  --ink: #E1EFFA; --ink-500: #9AA6B2; --grey-400: #9AA6B2; --grey-300: #4A5866; --grey-100: #1C242C;
+  --paper: #0F1418; --card: #161E26; --green: #E3D84C; --green-600: #E1EFFA;
+  --sh1: 2px 2px 0 #E1EFFA; --sh2: 4px 4px 0 #E1EFFA; --sh3: 6px 6px 0 #E1EFFA;
+  color-scheme: dark;
+}
+html[data-theme="invert"] a { color: #E1EFFA; }
+html[data-theme="invert"] .btn, html[data-theme="invert"] .btn:hover { color: #0F1418; }
+html[data-theme="invert"] .btn.ghost, html[data-theme="invert"] .btn.ghost:hover { color: #E1EFFA; }
+html[data-theme="invert"] .plate-head .pri, html[data-theme="invert"] .stat.ink { background: #E3D84C; color: #0F1418; }
+html[data-theme="invert"] .stat.ink .faint { color: #2A3642; }
+html[data-theme="invert"] .hatch { background: repeating-linear-gradient(45deg, #E1EFFA 0 2px, transparent 2px 6px); }
+html[data-theme="invert"] .box.term { background: #1C242C; color: #E1EFFA; border-color: #E1EFFA; }
+html[data-theme="invert"] .box.term .faint { color: #9AA6B2; }
+html[data-theme="invert"] footer.foot { background: #E1EFFA; color: #0F1418; border-top-color: #E1EFFA; }
+html[data-theme="invert"] footer.foot .foot-mark, html[data-theme="invert"] footer.foot, html[data-theme="invert"] footer.foot .foot-links a, html[data-theme="invert"] footer.foot .foot-base a { color: #0F1418; }
+html[data-theme="invert"] footer.foot .foot-role, html[data-theme="invert"] footer.foot .foot-h, html[data-theme="invert"] footer.foot .foot-base p { color: #4A5866; }
+html[data-theme="invert"] footer.foot .foot-top > * { border-left-color: #9AA6B2; }
+html[data-theme="invert"] footer.foot .foot-name { color: #C3CED8; border-top-color: #9AA6B2; }
+html[data-theme="invert"] footer.foot .foot-links a:hover, html[data-theme="invert"] footer.foot .foot-base a:hover { background: #E3D84C; color: #0F1418; }
+@media (max-width: 640px) { .theme-toggle { font-size: 0; gap: 0; padding: 8px; } }
+
+.hero .tag { border-radius: 0; }
